@@ -24,7 +24,7 @@ $TOMCAT_HOME/bin/catalina.sh run
 
 Command #3 Stop Tomcat
 
-#TOMCAT_HOME/bin/catalina.sh stop
+$TOMCAT_HOME/bin/catalina.sh stop
 
 Command #4 Tomcat Debug Mode
 
