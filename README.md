@@ -15,6 +15,7 @@ FROM codenvy/debian_jdk8
 Command #1 Build and copy war
 
 mvn -f ${current.project.path} clean install
+
 cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war
 
 Command #2 Run Tomcat
