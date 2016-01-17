@@ -1,4 +1,4 @@
-package com.codenvy.example.spring;
+package org.eclipse.che.examples;
 
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.Controller;
