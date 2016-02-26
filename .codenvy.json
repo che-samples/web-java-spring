@@ -1,0 +1,93 @@
+{
+  "v": "4.0",
+  "workspace": {
+    "defaultEnv": "java",
+    "environments": [
+      {
+        "name": "java",
+        "machineConfigs": [
+          {
+            "limits": {
+              "ram": 1000
+            },
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "location": "http://beta.codenvy.com/api/recipe/recipeb69bo9xp141dveu9/script",
+              "type": "recipe"
+            },
+            "dev": true
+          }
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "links": [],
+        "name": "web-java-spring",
+        "attributes": {
+          "language": [
+            "java"
+          ]
+        },
+        "type": "maven",
+        "source": {
+          "location": "https://github.com/che-samples/web-java-spring.git",
+          "type": "git",
+          "parameters": {}
+        },
+        "modules": [],
+        "path": "/web-java-spring",
+        "problems": [],
+        "mixins": [
+          "git"
+        ]
+      }
+    ],
+    "name": "java",
+    "attributes": {},
+    "commands": [
+      {
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war",
+        "name": "web-java-spring: build",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "mvn"
+      },
+      {
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh run",
+        "name": "web-java-spring: run tomcat",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        },
+        "type": "custom"
+      },
+      {
+        "commandLine": "$TOMCAT_HOME/bin/catalina.sh stop",
+        "name": "web-java-spring: stop tomcat",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "custom"
+      },
+      {
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war && $TOMCAT_HOME/bin/catalina.sh run",
+        "name": "web-java-spring: build and run",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        },
+        "type": "mvn"
+      },
+      {
+        "commandLine": "mvn -f ${current.project.path} clean install && cp ${current.project.path}/target/*.war $TOMCAT_HOME/webapps/ROOT.war && $TOMCAT_HOME/bin/catalina.sh jpda run",
+        "name": "web-java-spring: debug",
+        "attributes": {
+          "previewUrl": "http://${server.port.8080}"
+        },
+        "type": "mvn"
+      }
+    ],
+    "links": []
+  }
+}

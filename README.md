@@ -18,3 +18,7 @@ FROM [codenvy/debian_jdk8](https://hub.docker.com/r/codenvy/debian_jdk8/)
 | 2      | Run Tomcat      |   `$TOMCAT_HOME/bin/catalina.sh run` |
 | 3 | Stop Tomcat      |    `$TOMCAT_HOME/bin/catalina.sh stop` |
 | 4 | Tomcat Debug Mode      |    `$TOMCAT_HOME/bin/catalina.sh jpda run` |
+
+# Factory
+
+[![Contribute](https://codenvy.com/factory/resources/codenvy-contribute.svg)](http://beta.codenvy.com/f?id=hrh4c8gw8tlehd0i)
