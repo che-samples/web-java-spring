@@ -6,7 +6,7 @@
     <artifactId>web-java-spring</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>SpringDemo</name>
+    <name>Pete SpringDemo</name>
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
