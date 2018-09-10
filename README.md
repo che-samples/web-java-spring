@@ -23,3 +23,4 @@ FROM [codenvy/debian_jdk8](https://hub.docker.com/r/codenvy/debian_jdk8/)
 | 3 | Stop Tomcat      |    `$TOMCAT_HOME/bin/catalina.sh stop` |
 | 4 | Tomcat Debug Mode      |    `$TOMCAT_HOME/bin/catalina.sh jpda run` |
 
+edrfvgyhbju
